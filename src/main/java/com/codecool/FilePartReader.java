@@ -16,9 +16,9 @@ public class FilePartReader {
         }
 
         public FilePartReader() {
-            this.filePath = "src/main/resources/defaultFile.txt";
+            this.filePath = "src/main/resources/default.txt";
             this.fromLine = 1;
-            this.toLine = 3;
+            this.toLine = 2;
         }
 
         public void setup(String filePath, int fromLine, int toLine) {
@@ -41,6 +41,9 @@ public class FilePartReader {
         public String readLines() throws IOException {
             String fileContent = read();
             String[] fileLines = fileContent.split("\n");
+            if(fileLines.length < toLine) {
+                toLine = fileLines.length;
+            }
             String[] requestedLines = Arrays.copyOfRange(fileLines, fromLine - 1, toLine);
             return String.join("\n", requestedLines);
         }
