@@ -2,79 +2,95 @@ package com.codecool;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.when;
 
 class FileWordAnalyzerTest {
 
-    private FilePartReader filePartReader;
+    private FileWordAnalyzer fileWordAnalyzer;
+
+    @Mock
+    private FilePartReader filePartReaderMock;
+
 
     @BeforeEach
-    void setUp() {
-        filePartReader = new FilePartReader();
+    void prepare() {
+        MockitoAnnotations.initMocks(this);
+        fileWordAnalyzer = new FileWordAnalyzer(filePartReaderMock);
     }
 
+
     @Test
-    void wordsByABC_WithAllDataValid() {
+    void wordsByABC_WithAllDataValid() throws IOException{
         ArrayList<String> expectedResult = new ArrayList<>();
         expectedResult.add("baooab");
         expectedResult.add("co");
         expectedResult.add("hejo");
         expectedResult.add("tam");
 
-        ArrayList<String> loadedWords = new ArrayList<>();
+        ArrayList<String> loadedWords;
 
-        FileWordAnalyzer fileWordAnalyzer = new FileWordAnalyzer(filePartReader);
-        try {
-            loadedWords = fileWordAnalyzer.wordsByABC();
-        } catch (IOException e) {}
+        String defaultString = "hejo co tam\nbaooab";
+
+        when(filePartReaderMock.readLines())
+                .thenReturn(defaultString);
+
+        loadedWords = fileWordAnalyzer.wordsByABC();
 
         assertEquals(expectedResult, loadedWords);
     }
 
     @Test
-    void wordsContainingSubStringTest() {
+    void wordsContainingSubStringTest() throws IOException{
         ArrayList<String> expectedResult = new ArrayList<>();
         expectedResult.add("baooab");
 
-        ArrayList<String> loadedWords = new ArrayList<>();
+        ArrayList<String> loadedWords;
 
-        FileWordAnalyzer fileWordAnalyzer = new FileWordAnalyzer(filePartReader);
-        try {
-            loadedWords = fileWordAnalyzer.wordsContainingSubString("ab");
-        } catch (IOException e) {}
+        String defaultString = "hejo co tam\nbaooab";
+
+        when(filePartReaderMock.readLines())
+                .thenReturn(defaultString);
+
+        loadedWords = fileWordAnalyzer.wordsContainingSubString("ab");
 
         assertEquals(expectedResult, loadedWords);
     }
 
     @Test
-    void searchForPalindromes_ShouldReturnPalindrome() {
+    void searchForPalindromes_ShouldReturnPalindrome() throws IOException{
         ArrayList<String> expectedResult = new ArrayList<>();
         expectedResult.add("baooab");
 
-        ArrayList<String> loadedWords = new ArrayList<>();
-        filePartReader.setup("src/main/resources/default.txt", 1, 2);
-        FileWordAnalyzer fileWordAnalyzer = new FileWordAnalyzer(filePartReader);
-        try {
-            loadedWords = fileWordAnalyzer.wordsArePalindrome();
-        } catch (IOException e) {}
+        ArrayList<String> loadedWords;
+
+        String defaultString = "hejo co tam ło ja cie ale ładna pogoda ło ma gad\nbaooab";
+
+        when(filePartReaderMock.readLines())
+                .thenReturn(defaultString);
+
+        loadedWords = fileWordAnalyzer.wordsArePalindrome();
 
         assertEquals(expectedResult, loadedWords);
     }
 
     @Test
-    void returnEmptyList_WhenNoPalindromes() {
+    void returnEmptyList_WhenNoPalindromes() throws IOException{
         ArrayList<String> expectedResult = new ArrayList<>();
-        ArrayList<String> loadedWords = new ArrayList<>();
+        ArrayList<String> loadedWords;
 
-        filePartReader.setup("src/main/resources/default.txt", 1, 1);
-        FileWordAnalyzer analyzer = new FileWordAnalyzer(filePartReader);
-        try {
-            loadedWords = analyzer.wordsArePalindrome();
-        } catch (IOException e) {}
+        String defaultString = "hejo co tam ło ja cie ale ładna pogoda ło ma gad";
+
+        when(filePartReaderMock.readLines())
+                .thenReturn(defaultString);
+
+        loadedWords = fileWordAnalyzer.wordsArePalindrome();
 
         assertEquals(expectedResult, loadedWords);
     }
