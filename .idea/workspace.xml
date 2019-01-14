@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bceb64e-7884-4216-87e2-67affff3f2df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/default.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test_data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/codecool/FilePartReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/FilePartReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/FilePartReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codecool/FileWordAnalyzerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codecool/FileWordAnalyzerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/FilePartReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
+            <state relative-caret-position="540">
               <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -52,21 +47,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/FileWordAnalyzer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#263#264#0" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/default.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="1" selection-end-column="6" />
+            <state relative-caret-position="15">
+              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/codecool/FilePartReaderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/codecool/FilePartReaderTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/codecool/FileWordAnalyzerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="730">
-              <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+            <state relative-caret-position="253">
+              <caret line="62" column="34" lean-forward="true" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#368#369#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,6 +126,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/codecool/FilePartReaderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/FilePartReader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/codecool/FileWordAnalyzerTest.java" />
       </list>
     </option>
   </component>
@@ -214,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.FileWordAnalyzerTest">
     <configuration name="FilePartReaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestingSI" />
       <extension name="coverage">
@@ -230,8 +254,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileWordAnalyzerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestingSI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.FileWordAnalyzerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileWordAnalyzerTest" />
         <item itemvalue="JUnit.FilePartReaderTest" />
       </list>
     </recent_temporary>
@@ -247,18 +287,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FilePartReaderTest - 2019.01.14 at 12h 08m 06s.xml">
-      <configuration name="FilePartReaderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilePartReaderTest - 2019.01.14 at 12h 28m 23s.xml">
-      <configuration name="FilePartReaderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilePartReaderTest - 2019.01.14 at 12h 32m 28s.xml">
-      <configuration name="FilePartReaderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FilePartReaderTest - 2019.01.14 at 12h 34m 50s.xml">
-      <configuration name="FilePartReaderTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FilePartReaderTest - 2019.01.14 at 12h 38m 44s.xml">
       <configuration name="FilePartReaderTest" configurationId="JUnit" />
     </history-entry>
@@ -270,6 +298,24 @@
     </history-entry>
     <history-entry file="FilePartReaderTest - 2019.01.14 at 13h 05m 56s.xml">
       <configuration name="FilePartReaderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FilePartReaderTest - 2019.01.14 at 13h 19m 55s.xml">
+      <configuration name="FilePartReaderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FilePartReaderTest - 2019.01.14 at 13h 25m 17s.xml">
+      <configuration name="FilePartReaderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileWordAnalyzerTest - 2019.01.14 at 13h 25m 58s.xml">
+      <configuration name="FileWordAnalyzerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileWordAnalyzerTest - 2019.01.14 at 13h 30m 12s.xml">
+      <configuration name="FileWordAnalyzerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileWordAnalyzerTest - 2019.01.14 at 13h 32m 03s.xml">
+      <configuration name="FileWordAnalyzerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileWordAnalyzerTest - 2019.01.14 at 13h 35m 38s.xml">
+      <configuration name="FileWordAnalyzerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -287,7 +333,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.3292683" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -322,25 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/default.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/FileWordAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/test_data.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -348,9 +375,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/default.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/codecool/FilePartReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/FilePartReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
+        <state relative-caret-position="540">
           <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -360,12 +404,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/codecool/FilePartReaderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/FileWordAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+        <state relative-caret-position="208">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/codecool/FileWordAnalyzerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="62" column="34" lean-forward="true" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
           </folding>
         </state>
       </provider>
